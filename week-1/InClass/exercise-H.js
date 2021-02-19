@@ -1,13 +1,16 @@
+let greetingStart = ["Buenos dias", "como estas?"];
+let name = "Leon"
+
 function SaludoFcn(greetingStart, name) {
 
     let greeting = `${greetingStart} ${name}`;
 
     console.log(greeting);
 }
-let greetingStart = ["Buenos dias", "como estas?"];
 
-SaludoFcn(greetingStart[0], "Leon");
-SaludoFcn("Mario,", greetingStart[1]);
+// invocacion de la funcion, con definicion de parametros
+SaludoFcn(greetingStart[0], name);
+SaludoFcn(name, greetingStart[1]);
 
 
 
