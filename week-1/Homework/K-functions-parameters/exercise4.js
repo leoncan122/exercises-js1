@@ -1,5 +1,9 @@
 // Declare your function first
-
+function add(num1, num2) {
+    return num1 + num2;
+}
 // Call the function and assign to a variable `sum`
 
-console.log(sum);
+var result = add(42, 42);
+
+console.log(result);
