@@ -27,18 +27,20 @@ function multiply(num1, num2) {
 }
 
 function format(beforenumber) {
-    let price = beforenumber;
-    return console.log(beforenumber + " >>> £" + price.toFixed(2));
+    let price = "£" + beforenumber;
+    return price;
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode =
+let badCode = console.log(format(multiply((add(startingValue, 10)), 2)));
 
-    /* BETTER PRACTICE */
-
-    let goodCode =
+/* BETTER PRACTICE */
+let suma = add(startingValue, 10);
+let multiplicacion = multiply(suma, 2);
+let formateada = format(multiplicacion);
+let goodCode = console.log(formateada);
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
