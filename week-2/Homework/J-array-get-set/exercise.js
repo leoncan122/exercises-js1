@@ -5,11 +5,11 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+  return arr.indexOf(arr[0]); // complete this statement
 }
 
 function last(arr) {
-  return; // complete this statement
+  return arr.pop(); // complete this statement
 }
 
 /* 
@@ -22,7 +22,7 @@ console.log(first(numbers));
 console.log(last(numbers));
 console.log(last(names));
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   1
