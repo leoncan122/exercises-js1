@@ -15,8 +15,16 @@ const daysOfWeek = [
 ];
 
 function daysWhitT(arr) {
-  if (arr.indexOf("T") > -1) {
-    return console.log(arr)
+
+  let result = [];
+
+  for (let i = 0; i < 6; i++) {
+
+    if (arr[i].startsWith("T", 0)) {
+
+      result.push(arr[i]);
+    }
   }
+  return result;
 }
 console.log("the days of the week that began whit T are: " + daysWhitT(daysOfWeek))
