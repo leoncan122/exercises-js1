@@ -15,17 +15,22 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
-let check = pairsByIndex.some(function (x) {
-  if (x === null) {
-    process.exit(1);
-  }
-});
+const ifnull = pairsByIndex.some((x) => x === null);
+console.log(ifnull);
+if (ifnull) {
+  process.exit(1);
+}
 
 var pairs = pairsByIndex.map(function (indexes) {
   var student = students[indexes[0]];
   var mentor = mentors[indexes[1]];
   return [student, mentor];
 });
-console.log(pairs);
+console.log(pairs)
 
+const somenulls = pairs.some((pair) => pair === null);
+
+if (somenulls) {
+  process.exit(1);
+}
 
