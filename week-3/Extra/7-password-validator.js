@@ -24,6 +24,25 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
 
+  let lower = [97, 122];
+  let upper = [65, 90];
+  let numeric = [48, 57];
+  let symbol = [33, 35, 36, 37, 46, 42, 38];
+
+  let p1 = passwords.map((elem) => {
+
+    let n = elem.split("").map(c => c.charCodeAt());
+
+    if (n.length >= 5 &&
+      n.some(x => upper.includes(x)) &&
+      n.some(x => lower.includes(x)) &&
+      n.some(x => numeric.includes(x)) &&
+      n.some(x => symbol.includes(x))
+    ) {
+      return true;
+    }
+  });
+  return p1;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -34,21 +53,21 @@ const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 const util = require('util');
 
 function test(test_name, actual, expected) {
-    let status;
-    if (util.isDeepStrictEqual(actual, expected)) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (util.isDeepStrictEqual(actual, expected)) {
+    status = "PASSED";
+  } else {
+    status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
   "validatePasswords function works - case 1",
   validatePasswords(passwords1),
   [false, false, true, false, false]
- );
+);
 
 test(
   "validatePasswords function works - case 2",
