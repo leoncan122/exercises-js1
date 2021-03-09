@@ -24,25 +24,23 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
 
-  let lower = [97, 122];
-  let upper = [65, 90];
-  let numeric = [48, 57];
-  let symbol = [33, 35, 36, 37, 46, 42, 38];
+  let upper_ASCII = [65, 90];
+  let lower_ASCII = [97, 122];
+  let num_ASCII = [48, 57];
+  let symbol_ASCII = [33, 35, 36, 37, 46, 42, 38];
 
-  let p1 = passwords.map((elem) => {
+  let separados = (elem) => elem.split("");
 
-    let n = elem.split("").map(c => c.charCodeAt());
+  let z = passwords.map(separados);
 
-    if (n.length >= 5 &&
-      n.some(x => upper.includes(x)) &&
-      n.some(x => lower.includes(x)) &&
-      n.some(x => numeric.includes(x)) &&
-      n.some(x => symbol.includes(x))
-    ) {
-      return true;
-    }
-  });
-  return p1;
+  let h = z.map(o => o.some(v => upper_ASCII.includes(v)) &&
+    o.some(v => lower_ASCII.includes(v)) &&
+    o.some(v => num_ASCII.includes(v)) &&
+    o.some(v => symbol_ASCII.includes(v)))
+
+
+  return h;
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
