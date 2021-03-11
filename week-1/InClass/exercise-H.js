@@ -41,7 +41,9 @@ function cantidad_habit(mujeres, hombres, niños) {
 }
 
 function ingreso_habit(multiplicador, mujeres, hombres, niños) {
+
     let multiplicacion_habit = cantidad_habit(mujeres, hombres, niños) * multiplicador;
+
     return multiplicacion_habit;
 }
 
