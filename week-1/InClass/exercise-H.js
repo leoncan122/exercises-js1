@@ -48,3 +48,21 @@ function ingreso_habit(multiplicador, mujeres, hombres, niños) {
 }
 
 console.log(ingreso_habit(3, 10, 10, 1));
+
+
+// homerwork repaso
+
+function division(num1, num2) {
+    return num1 / num2;
+}
+
+let x = division(10, 2);
+
+function display(result) {
+    let messg = "el resultado es " + result + "."
+    return messg;
+}
+
+console.log(display(x));
+
+

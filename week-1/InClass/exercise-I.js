@@ -13,3 +13,17 @@ function presentation(name, age) {
 
 message = presentation("leon", 25)
 console.log(message)
+
+
+//homework repaso
+
+let ageindays = (age) => age * 365;
+let res1 = ageindays(30);
+
+let presentacion = (name, age) => {
+    let tiempoentierra = ageindays(age);
+    let message = "Hola " + name + " tu tiempo estimado en la tierra es " + tiempoentierra + " dias."
+    return message;
+}
+
+console.log(presentacion("jimena", 20));
