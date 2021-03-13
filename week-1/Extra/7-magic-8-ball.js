@@ -46,6 +46,56 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
+  console.log("The ball has shaken!")
+
+  let result = Math.random();
+
+  let answer = ""
+  if (result === 0) {
+    answer.concat("It is certain.");
+  }
+  else if (result === 1) {
+    answer.concat("It is decidedly so.");
+  }
+  else if (result === 2) {
+    answer.concat("Without a doubt.");
+  } else if (result === 3) {
+    answer.concat("Yes - definitely.");
+  } else if (result === 4) {
+    answer.concat("You may rely on it.");
+  } else if (result === 5) {
+    answer.concat("As I see it, yes.");
+  } else if (result === 6) {
+    answer.concat("Most likely.");
+  } else if (result === 7) {
+    answer.concat("Outlook good.");
+  } else if (result === 8) {
+    answer.concat("Yes.");
+  } else if (result === 9) {
+    answer.concat("Signs point to yes.");
+  } else if (result === 10) {
+    answer.concat("Reply hazy, try again.");
+  } else if (result === 11) {
+    answer.concat("Ask again later.");
+  } else if (result === 12) {
+    answer.concat("Better not tell you now.");
+  } else if (result === 13) {
+    answer.concat("Cannot predict now.");
+  } else if (result === 14) {
+    answer.concat("Concentrate and ask again.");
+  } else if (result === 15) {
+    answer.concat("Don't count on it.");
+  } else if (result === 16) {
+    answer.concat("My reply is no.");
+  } else if (result === 17) {
+    answer.concat("My sources say no.");
+  } else if (result === 18) {
+    answer.concat("Outlook not so good.");
+  } else if (result === 19) {
+    answer.concat("Very doubtful");
+  }
+
+  return answer;
 }
 
 // This function should say whether the answer it is given is
@@ -54,18 +104,28 @@ function shakeBall() {
 // - negative
 // - very negative
 // This function should expect to be called with any value which was returned by the shakeBall function.
-function checkAnswer(answer) {
+function checkAnswer() {
+  let r = shakeBall()
+  if (r <= 4) {
+    return "very positive";
+  } else if (r >= 5 <= 9) {
+    return "positive";
+  } else if (r >= 10 <= 14) {
+    return "negative";
+  } else if (r >= 15 <= 19) {
+    return "very negative";
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
-
+ 
 To run these tests type `node 3-magic-8-ball.js` into your terminal
 */
 
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };

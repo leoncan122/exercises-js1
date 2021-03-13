@@ -15,7 +15,7 @@ message = presentation("leon", 25)
 console.log(message)
 
 
-//homework repaso
+console.log("--------------------");//homework repaso
 
 let ageindays = (age) => age * 365;
 let res1 = ageindays(30);

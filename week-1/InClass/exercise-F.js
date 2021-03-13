@@ -12,6 +12,8 @@ console.log(ShowResult[0]);
 
 console.log(ShowResult[1]);
 
+//homework repaso
+
 let NumberOfRapers = 1120
 let NumberOfTrapers = 27
 

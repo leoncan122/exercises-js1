@@ -50,7 +50,7 @@ function ingreso_habit(multiplicador, mujeres, hombres, niños) {
 console.log(ingreso_habit(3, 10, 10, 1));
 
 
-// homerwork repaso
+console.log("------------------");// homerwork repaso
 
 function division(num1, num2) {
     return num1 / num2;

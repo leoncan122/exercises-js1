@@ -6,7 +6,7 @@ function getNumber() {
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
   return w1.concat(w2);
-}// this function will return a new String, whic will be the add of 2 strings.
+}// this function will return a new String, that will be composed by 2 strings.
 
 function concatenate(firstWord, secondWord, thirdWord) {
   /*return ` ${firstWord} ${secondWord} ${thirdWord} `;*/

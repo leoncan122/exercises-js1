@@ -21,9 +21,13 @@ function calculateSalesTax(price) {
 */
 
 function addTaxAndFormatCurrency(price) {
+
   let ivaIncluded = calculateSalesTax(price);
+
   let priceFloated = ivaIncluded.toFixed(2);
+
   let showPrice = "£" + priceFloated;
+
   return showPrice;
 }
 

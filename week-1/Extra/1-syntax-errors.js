@@ -37,3 +37,6 @@ function test(test_name, actual, expected) {
 test("fixed addNumbers function - case 1", addNumbers(3, 4, 6), 13);
 test("fixed introduceMe function", introduceMe("Sonjide", 27), "Hello, my name is Sonjide and I am 27 years old");
 test("fixed getTotal function", getTotal(23, 5), "The total is 28");
+
+
+

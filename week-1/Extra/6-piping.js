@@ -34,6 +34,7 @@ function format(beforenumber) {
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
+// because you are calling too many functions at the same time, and you don't see the result for each one.
 let badCode = console.log(format(multiply((add(startingValue, 10)), 2)));
 
 /* BETTER PRACTICE */
