@@ -18,3 +18,16 @@ function sumTillNum(num) {
 }
 
 console.log("Sum from 0 to " + n + " is: " + sumTillNum(n));
+
+console.log("-------------"); //homework repaso
+
+let forsum = (num) => {
+	let counter = num;
+	let result = 0;
+	for (let i = 0; i <= counter; i++) {
+		result = result + i;
+
+	}
+	return "suma desde 0 hasta " + counter + " is: " + result;
+}
+console.log(forsum(11));

@@ -19,3 +19,14 @@ function sumTillNum(num) {
 }
 
 console.log("Sum from 0 to " + n + " is: " + sumTillNum(n));
+
+console.log("-------------------")//homework repaso
+
+let x = 0;
+let resultado = 0
+
+while (x <= 15) {
+	resultado = resultado + x
+	x++
+}
+console.log("Suma desde 0 hasta " + x + " is: " + resultado);
