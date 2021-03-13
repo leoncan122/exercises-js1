@@ -9,3 +9,16 @@ function numberChecker(num) {
     return `${num} isn't even a number :(`;
   }
 }
+console.log(numberChecker(17));
+
+console.log("------------");//homework repaso
+let vowelChecker = (word) => {
+  if (word >= 'a' && word <= 'z') {
+    return word + ", you right is a vowel"
+  } else {
+    return word + " it's not a vowel, sorry :("
+  }
+}
+
+console.log(vowelChecker("i"));
+console.log(vowelChecker("A"));
