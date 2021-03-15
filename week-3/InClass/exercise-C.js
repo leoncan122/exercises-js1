@@ -17,3 +17,9 @@ function abracaFunction(yourFunc) {
 let mayus = (array) => array.map((name) => name.toUpperCase());
 
 console.log(abracaFunction(mayus));
+
+console.log("---------------"); //homework repaso
+
+let mayusculas = (arr) => arr.map(x => x.toUpperCase());
+
+console.log(abracaFunction(mayusculas));

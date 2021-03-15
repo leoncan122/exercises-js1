@@ -20,3 +20,18 @@ let bornlist = [1964, 2008, 1999, 2005, 1978, 1985, 1919];
 
 bornlist.forEach(driver);
 
+console.log("---------------") //homework repaso
+
+let manejar = (nacimiento) => {
+    let legal = 2003;
+    let x = nacimiento - legal;
+
+    if (nacimiento <= legal) {
+        return "Los nacidos en el año " + nacimiento + " pueden manejar";
+    } else {
+        return "Los nacidos en el año " + nacimiento + " no pueden manejar, podran hacerlo en " + x + " años";
+    }
+}
+
+let lista = bornlist.map(manejar);
+console.log(lista);

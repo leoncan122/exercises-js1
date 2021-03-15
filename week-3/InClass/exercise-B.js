@@ -16,3 +16,22 @@ function clase(name, clase) {
 }
 console.log(clase("Emilio", español));
 console.log(clase("pedro", todos));
+
+console.log("----------------"); //homework repaso
+
+let clase1 = ["marcos", "juan", "isabel", "lorena", "pepe", "wilmer"];
+let clase2 = ["giovanni", "emily", "ricardo", "andrea", "roberto"];
+
+console.log(clase1.concat(clase2));
+
+let donde = (nombre, classe) => {
+
+    let classeclean = classe.split(nombre);
+
+    if (classe.includes(nombre)) {
+        return nombre + " esta en la clase con " + classeclean;
+    } else {
+        return nombre + " no esta en la clase con " + classeclean;
+    }
+}
+console.log(donde("marcos", clase1));

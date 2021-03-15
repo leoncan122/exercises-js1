@@ -21,7 +21,7 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-
+/*
 function validatePasswords(passwords) {
 
   let upper_ASCII = [65, 90];
@@ -41,6 +41,35 @@ function validatePasswords(passwords) {
 
   return h;
 
+}*/
+
+function validatePasswords(passwords) {
+  let p1 = passwords.map(e => e.split(""));
+
+  let p2 = p1.map(x => {
+    let y = x.map(w => w.charCodeAt())
+    return y;
+  });
+
+  let upper_ASCII = [65, 90];
+  let lower_ASCII = [97, 122];
+  let num_ASCII = [48, 57];
+  let symbol_ASCII = [33, 35, 36, 37, 46, 42, 38];
+
+  let ui = (p_dos) => {
+    let result = p_dos.map(o => {
+      let p_1 = o.length >= 5;
+      let p_2 = o.some(qq => qq >= upper_ASCII[0] && qq <= upper_ASCII[1]);
+      let p_3 = o.some(qq => qq >= lower_ASCII[0] && qq <= lower_ASCII[1]);
+      let p_4 = o.some(qq => qq >= num_ASCII[0] && qq <= num_ASCII[1]);
+      let p_5 = o.some(qq => qq >= symbol_ASCII[0] && qq <= symbol_ASCII[6]);
+
+      return p_1, p_2, p_3, p_4, p_5;
+    })
+    return result;
+  }
+
+  return ui(p2);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -11,7 +11,19 @@ function age(birthYear) {
 let bornlist = [1964, 2008, 1999, 2005, 1978,
     1985, 1919];
 
+let ages = bornlist.map(age);
+
+
 // bornlist.forEach(age);
+
+console.log("-----------"); //homework repaso
+
+let edad = (añonaci) => 2021 - añonaci;
+
+let edades = bornlist.map(edad);
+
+console.log(edades);
+
 
 
 
