@@ -15,3 +15,18 @@ function cleaner(array) {
 }
 
 console.log(cleaner(arr));
+
+console.log("-------------"); //homework repaso
+
+let limpiar = (arr) => {
+
+    let solostring = arr.filter(x => typeof x === "string");
+
+    let simbol = "!"
+
+    let result = solostring.map(c => c.toUpperCase().concat(simbol));
+
+    return result;
+}
+
+console.log(limpiar(arr));

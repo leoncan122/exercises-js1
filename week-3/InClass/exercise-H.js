@@ -5,17 +5,20 @@
 
 let nombres = ["leon", "antonio", "angelo", "maria"];
 
-//function check(lista, nombre) {
-//   if (lista.includes(nombre)) {
-//      console.log("Found me!");
-//  } else {
-//       console.log("Haven't found me :(");
-//   }
-//}
+function check(lista, nombre) {
+    if (lista.includes(nombre)) {
+        console.log("Found me!");
+    } else {
+        console.log("Haven't found me :(");
+    }
+}
 
+//homework repaso
 
-function check(nombre) {
-    let result = nombres.find(name => name === nombre);
+function check2(nombre, arr) {
+
+    let result = arr.find(name => name === nombre);
+
     if (result) {
         console.log("Found me!");
     } else {
@@ -23,4 +26,6 @@ function check(nombre) {
     }
 }
 
-check("antonio");
+check(nombres, "antonio");
+
+check2("lisandro", nombres);
