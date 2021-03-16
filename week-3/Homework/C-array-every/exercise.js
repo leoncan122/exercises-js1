@@ -14,6 +14,21 @@ if (groupIsOnlyStudents) {
   console.log("The group does not contain only students");
 }
 
+console.log("-------------"); //homework repaso
+
+let soloestudiantes = group.every(est => students.includes(est));
+console.log(soloestudiantes);
+
+console.log("--------------");
+
+for (let index = 0; index < group.length; index++) {
+  const element = group[index];
+
+  if (students.includes(element)) {
+    console.log(element);
+  }
+}
+
 /* EXPECTED RESULT */
 
 // The group does not contain only students

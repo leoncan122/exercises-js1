@@ -16,9 +16,13 @@ var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "
 var longNameThatStartsWithA = names.find(findLongNameThatStartsWithA)
 console.log(longNameThatStartsWithA);
 
+console.log("----------"); //homework repaso
 
-//let reasult = names.find((nombre) => nombre.startsWith("A") && nombre.length - 7);
-//console.log(reasult);
+let morethan8letters = names.find(name => name.startsWith("A") && name.length > 8);
+console.log(morethan8letters);
+
+let reasult = names.find((nombre) => nombre.startsWith("A") && nombre.length - 7);
+console.log(reasult);
 
 /* EXPECTED OUTPUT */
 // "Alexandra"

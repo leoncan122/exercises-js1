@@ -16,7 +16,7 @@ var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
 const ifnull = pairsByIndex.some((x) => x === null);
-console.log(ifnull);
+console.log("It is " + ifnull + " that there is a null value");// esta linea fue ajustada en el repaso.
 if (ifnull) {
   process.exit(1);
 }
@@ -28,9 +28,4 @@ var pairs = pairsByIndex.map(function (indexes) {
 });
 console.log(pairs)
 
-const somenulls = pairs.some((pair) => pair === null);
-
-if (somenulls) {
-  process.exit(1);
-}
 
